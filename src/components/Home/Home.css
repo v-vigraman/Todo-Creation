@@ -1,0 +1,15 @@
+.ant-tabs-nav .ant-tabs-nav-animated {
+    float: left !important;
+  }
+  
+  .ant-tabs-ink-bar .ant-tabs-ink-bar-animated {
+    padding-left: 50px !important;
+  }
+  
+  .ant-tabs-tab-active .ant-tabs-tab {
+    padding: 12px 7px !important;
+  }
+
+.ant-table-wrapper {
+  padding-top: 20px !important;
+}
