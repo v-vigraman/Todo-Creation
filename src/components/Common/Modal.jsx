@@ -33,8 +33,8 @@ class CustomModal extends React.Component {
         let postData = {};
         await submitForm();
         if(selectedTab === "1") {
-            postData.action = action;
-            postData.dateTime = dateTime;
+            postData.action = action || editTodoData.action;
+            postData.dateTime = dateTime || editTodoData.dateTime;
             if(isEditOpen) {
                 postData.key = editTodoData.key
             }
@@ -67,7 +67,7 @@ class CustomModal extends React.Component {
 
     componentDidUpdate() {
         const { selectedTab, isEditOpen, editTodoData, editUserData, initialEdit, lockEdit } = this.props
-        if(isEditOpen && initialEdit){
+        if(isEditOpen && initialEdit && this.formRef.current){
             lockEdit()
             if(selectedTab === "1") {
                 this.formRef.current.setFieldsValue({
